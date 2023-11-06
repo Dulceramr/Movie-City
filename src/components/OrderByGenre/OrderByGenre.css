@@ -1,0 +1,25 @@
+.button-order-by-genre {
+  background-color: #fff;
+  color: #2e4053;
+  border: 1px solid #717d7e;
+  border-radius: 4px;
+  height: 3em;
+  width: 8em;
+  margin: 4px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Playpen Sans", cursive;
+}
+
+.label-order-by-genre {
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Playpen Sans", cursive;
+}
+
+.container {
+  margin: 6em;
+}

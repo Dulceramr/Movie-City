@@ -1,0 +1,27 @@
+.movie-item {
+    width: 15em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .poster {
+    border-radius: 15%;
+    width: 14em;
+    border: #fff 3px solid;
+  }
+  
+  .title {
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playpen Sans", cursive;
+    font-size: large;
+  }
+  
+  .date {
+      font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playpen Sans', cursive;
+  }

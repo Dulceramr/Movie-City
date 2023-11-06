@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.main-title{
+  color: #fff;
+  margin-top: 1.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.select-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+.button-sort-by {
+    background-color: #fff;
+    color: #2e4053;
+    border: 1px solid #717d7e;
+    border-radius: 4px;
+    height: 3em;
+    width: 15em;
+    margin: 4px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Playpen Sans", cursive;
+  }
+  
+  .label-sort-by {
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Noto Sans", sans-serif;
+    font-family: "Playpen Sans", cursive;
+  }

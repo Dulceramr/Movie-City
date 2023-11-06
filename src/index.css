@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-image: url('/background_body.png');
+  background-repeat: repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

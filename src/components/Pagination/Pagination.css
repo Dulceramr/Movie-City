@@ -1,0 +1,46 @@
+.button {
+    background-color: #fff;
+    color: #2e4053;
+    border: 1px solid #717d7e;
+    border-radius: 45%;
+    height: 3em;
+    width: 3em;
+    margin: 4px;
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playpen Sans", cursive;
+    font-size: medium;
+  }
+  
+  .button-current-page {
+    background-color: #ccd1d1;
+    color: #2e4053;
+    border: 1px solid #717d7e;
+    border-radius: 45%;
+    height: 3em;
+    width: 3em;
+    margin: 4px;
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playpen Sans", cursive;
+    font-size: medium;
+  }
+  
+  .large-button {
+    background-color: #fff;
+    color: #2e4053;
+    border: 1px solid #717d7e;
+    border-radius: 45%;
+    height: 3em;
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-family: "Playpen Sans", cursive;
+    font-size: medium;
+  }
+  
+  .pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em;
+  }
