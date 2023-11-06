@@ -10,6 +10,7 @@
     font-family: "Montserrat", sans-serif;
     font-family: "Playpen Sans", cursive;
     font-size: medium;
+    cursor: pointer;
   }
   
   .button-current-page {
@@ -24,6 +25,7 @@
     font-family: "Montserrat", sans-serif;
     font-family: "Playpen Sans", cursive;
     font-size: medium;
+    cursor: pointer;
   }
   
   .large-button {
@@ -36,11 +38,12 @@
     font-family: "Montserrat", sans-serif;
     font-family: "Playpen Sans", cursive;
     font-size: medium;
+    cursor: pointer;
   }
   
   .pagination-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 3em;
+    margin: 2em;
   }

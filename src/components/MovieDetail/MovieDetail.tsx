@@ -1,5 +1,8 @@
 import React from "react";
 import "./MovieDetail.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 type MovieDetailProps = {
   movie: any;
@@ -14,7 +17,9 @@ export const MovieDetail: React.FC<MovieDetailProps> = ({
   return (
     <>
       <h2 className="movie-title">{movie.title}</h2>
-      <button className="detail-button" onClick={onReturn}>Return to List</button>
+      <button className="detail-button" onClick={onReturn}>
+      <FontAwesomeIcon className="icon" icon={faArrowLeft} style={{color: "#f1f4f9",}} />
+      </button>
       <div className="Movie-detail-container">
       <section>
       {movie.poster_path ? (

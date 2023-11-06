@@ -45,7 +45,7 @@ export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }
                       <img
                         src={defaultImage}
                         alt="Default movie poster"
-                        className="poster"
+                        className="poster-default"
                       />
                       <div className="no-image-text">No Image Available</div>
                     </>

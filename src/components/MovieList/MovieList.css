@@ -1,27 +1,38 @@
 .movie-item {
-    width: 15em;
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .poster {
-    border-radius: 15%;
-    width: 14em;
-    border: #fff 3px solid;
-  }
-  
-  .title {
-    font-family: "Inter", sans-serif;
-    font-family: "Montserrat", sans-serif;
-    font-family: "Playpen Sans", cursive;
-    font-size: large;
-  }
-  
-  .date {
-      font-family: 'Inter', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Playpen Sans', cursive;
-  }
+  width: 15em;
+  height: 35em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 3em;
+  text-align: center;
+}
+
+.poster {
+  border-radius: 15%;
+  width: 14em;
+  height: 20em;
+  border: #fff 3px solid;
+}
+
+.poster-default {
+  border-radius: 15%;
+  width: 11em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playpen Sans", cursive;
+  font-size: large;
+}
+
+.date {
+  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Playpen Sans", cursive;
+}
