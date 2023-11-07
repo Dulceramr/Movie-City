@@ -1,18 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./OrderByGenre.css"
-
-type Movie = {
-  id:number;
-  title: string;
-  release_date: string;
-  poster_path: string;
-  overview: string;
-};
-
-type Genre = {
-  id: number;
-  name: string;
-};
+import { Movie, Genre } from "../../types/types";
 
 export const OrderByGenre: React.FC<{
   setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,

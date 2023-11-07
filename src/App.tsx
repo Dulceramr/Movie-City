@@ -6,14 +6,7 @@ import { OrderByGenre } from './components/OrderByGenre/OrderByGenre';
 import SearchMovie from './components/SearchMovie/SearchMovie';
 import SortBy from './components/SortBy/SortBy';
 import Pagination from './components/Pagination/Pagination';  
-
-type Movie = {
-  id: number;
-  title: string;
-  release_date: string;
-  poster_path: string;
-  overview: string;
-};
+import { Movie } from './types/types'
 
 function App() {
   const [peliculas, setPeliculas] = useState<Movie[]>([]);

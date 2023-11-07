@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import "./SearchMovie.css"
-
-type Movie = {
-  id: number;
-  title: string;
-  release_date: string;
-  poster_path: string;
-  overview: string;
-};
+import "./SearchMovie.css";
+import { Movie } from "../../types/types";
 
 const SearchMovie: React.FC<{
   setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,

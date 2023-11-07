@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import "./SortBy.css"
-
-type Movie = {
-  id:number;
-  title: string;
-  release_date: string;
-  poster_path: string;
-  overview: string;
-};
+import "./SortBy.css";
+import { Movie } from "../../types/types";
 
 const SortBy: React.FC<{
   setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,

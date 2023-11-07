@@ -2,12 +2,7 @@ import React from "react";
 import "./MovieDetail.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
-
-type MovieDetailProps = {
-  movie: any;
-  onReturn: () => void;
-};
+import { Genre, MovieDetailProps } from "../../types/types";
 
 export const MovieDetail: React.FC<MovieDetailProps> = ({
   movie,
@@ -17,6 +12,7 @@ export const MovieDetail: React.FC<MovieDetailProps> = ({
   return (
     <>
       <h2 className="movie-title">{movie.title}</h2>
+      <h3 className="movie-tagline">{movie.tagline}</h3>
       <button className="detail-button" onClick={onReturn}>
       <FontAwesomeIcon className="icon" icon={faArrowLeft} style={{color: "#f1f4f9",}} />
       </button>
@@ -40,10 +36,10 @@ export const MovieDetail: React.FC<MovieDetailProps> = ({
       )}
     </section>
         <aside className="Movie-text">
-          <p>{movie.release_date}</p>
-          <p>{movie.genres.map((genre: any) => genre.name).join(", ")}</p>
+          <p>Release Date: {movie.release_date}</p>
+          <p>Genres: {movie.genres.map((genre: Genre) => genre.name).join(", ")}</p>
           <p>
-            Average rating: {movie.vote_average} ({movie.vote_count} votes)
+            Average rating: {movie.vote_average} ({movie.vote_count} votes) 
           </p>
           <p>{movie.overview}</p>
         </aside>

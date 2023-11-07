@@ -1,18 +1,6 @@
 import React from "react";
 import "./MovieList.css";
-
-type Movie = {
-  id: number;
-  title: string;
-  release_date: string;
-  poster_path: string;
-  overview: string;
-};
-
-type MovieListProps = {
-  peliculas: Movie[];
-  onSelectMovie: (movieId: number) => void;
-};
+import { Movie, MovieListProps } from "../../types/types";
 
 export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }) => {
   const dividedArray = (array: Movie[], chunkSize: number) => {
