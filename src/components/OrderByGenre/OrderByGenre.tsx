@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "./OrderByGenre.css"
-import { Movie, Genre } from "../../types/types";
+import { Genre, OrderByGenreProps } from "../../types/types";
 
-export const OrderByGenre: React.FC<{
-  setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
-  setTotalPages: React.Dispatch<React.SetStateAction<number>>,
-  currentPage: number 
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-}> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage  }) => {
+export const OrderByGenre: React.FC<OrderByGenreProps> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage  }) => {
   const BASE_URL = 'https://api.themoviedb.org/3';
   const API_KEY = '03d8479e6ac8e870c3ef0fea7b1b15c3';
 

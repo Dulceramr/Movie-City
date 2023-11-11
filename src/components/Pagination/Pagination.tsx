@@ -1,11 +1,8 @@
 import React from 'react';
-import "./Pagination.css"
+import "./Pagination.css";
+import { PaginationProps } from "../../types/types";
 
-const Pagination: React.FC<{
-  currentPage: number,
-  totalPages: number,
-  onPageChange: (page: number) => void
-}> = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
 
   // Función para generar el rango de páginas a mostrar
   const generatePageNumbers = () => {
