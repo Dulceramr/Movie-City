@@ -7,6 +7,7 @@ import SearchMovie from './components/SearchMovie/SearchMovie';
 import SortBy from './components/SortBy/SortBy';
 import Pagination from './components/Pagination/Pagination';  
 import { Movie } from './types/types'
+import { Navigator } from './components/Navigator/Navigator';
 
 function App() {
   const [peliculas, setPeliculas] = useState<Movie[]>([]);
@@ -48,6 +49,7 @@ function App() {
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
           <MovieList peliculas={peliculas} onSelectMovie={setSelectedMovieId} /> 
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
+          <Navigator />
         </>
       )}
     </>
