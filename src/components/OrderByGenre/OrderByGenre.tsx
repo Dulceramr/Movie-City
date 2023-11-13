@@ -15,6 +15,9 @@ export const OrderByGenre: React.FC<OrderByGenreProps> = ({ setPeliculas, setTot
         const response = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
         const data = await response.json();
         setGenres(data.genres);
+        /* console.log(`genres: ${genres}`);
+        console.log(`response await fetch: ${response}`);
+        console.log(`data await response.json: ${data}`); */
       } catch (error) {
         console.error("Error fetching genres", error);
       }
