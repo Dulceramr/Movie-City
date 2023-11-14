@@ -55,7 +55,7 @@ function App() {
       </Routes>
       {selectedMovie ? (
         <Route 
-        path={`/movies/${selectedMovieId}`} 
+        path={`/movies/:id`} 
         element={<MovieDetail movie={selectedMovie} onReturn={() => setSelectedMovie(null)} />} 
         />
       ) : (
