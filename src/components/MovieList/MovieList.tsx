@@ -1,8 +1,9 @@
 import React from "react";
 import "./MovieList.css";
 import { Movie, MovieListProps } from "../../types/types";
+import { Link } from "react-router-dom";
 
-export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }) => {
+export const MovieList: React.FC<MovieListProps> = ({ peliculas }) => {
   const dividedArray = (array: Movie[], chunkSize: number) => {
     const result = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -21,7 +22,7 @@ export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }
           <tr key={rowIndex}>
             {row.map((movie) => (
               <td key={movie.id}>
-                <div className="movie-item" onClick={() => onSelectMovie(movie.id)}>
+                <Link to={`/movies/${movie.id}`} className="movie-item">
                   {movie.poster_path ? (
                     <img
                       src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
@@ -40,7 +41,7 @@ export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }
                   )}
                   <h4 className="title">{movie.title}</h4>
                   <p className="date">{movie.release_date}</p>
-                </div>
+                </Link>
               </td>
             ))}
           </tr>

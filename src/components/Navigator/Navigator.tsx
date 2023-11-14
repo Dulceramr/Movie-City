@@ -1,4 +1,5 @@
 //import React from 'react'
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFire,
@@ -12,19 +13,19 @@ export const Navigator = () => {
     <nav>  
       <ul>
         <li>
-          <button className="trending" data-text="Trending">
+          <Link to="/trending" className="trending" data-text="Trending">
             <FontAwesomeIcon icon={faFire} className="icon" />
-          </button>
+          </Link>
         </li>
         <li>
-          <button className="movies" data-text="Movies">
+          <Link to="/movies" className="movies" data-text="Movies">
             <FontAwesomeIcon icon={faFilm} className="icon" />
-          </button>
+          </Link>
         </li>
         <li>
-          <button className="series" data-text="Series">
+          <Link to="/series" className="series" data-text="Series">
             <FontAwesomeIcon icon={faTv} className="icon" />
-          </button>
+          </Link>
         </li>
       </ul>
     </nav>
