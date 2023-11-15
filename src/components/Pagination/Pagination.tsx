@@ -38,14 +38,19 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   const pageNumbers = generatePageNumbers();
 
+  const handlePageChange = (page:number) => {
+    onPageChange(page);
+    window.scroll(0,0);
+  };
+
   return (
     <div className='pagination-container'>
-      {currentPage > 1 && <button className="large-button" onClick={() => onPageChange(currentPage - 1)}>Anterior</button>}
+      {currentPage > 1 && <button className="large-button" onClick={() => handlePageChange(currentPage - 1)}>Anterior</button>}
       
       {pageNumbers.map(number => (
         <button 
           key={number}
-          onClick={() => onPageChange(number)}
+          onClick={() => handlePageChange(number)}
           className={number === currentPage ? 'button-current-page' : 'button'}
           >
           {number}
@@ -53,7 +58,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
       ))}
 
       {currentPage < totalPages && <button className="large-button" 
-      onClick={() => onPageChange(currentPage + 1)}>Siguiente</button>}
+      onClick={() => handlePageChange(currentPage + 1)}>Siguiente</button>}
     </div>
   );
 };
