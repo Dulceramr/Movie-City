@@ -8,13 +8,23 @@
   cursor: pointer;
   padding-top: 3em;
   text-align: center;
+  border-radius: 20px;
+  background-color: #282c34;
+  border: #3c3c3c solid 2px
+}
+
+.movie-item:hover {
+  background-color: #fffff0;
+  color: black;
+  width: 16em;
+  height: 36em;
 }
 
 .poster {
   border-radius: 15%;
   width: 14em;
   height: 20em;
-  border: #fff 3px solid;
+  border: #3c3c3c 2px solid;
 }
 
 .poster-default {

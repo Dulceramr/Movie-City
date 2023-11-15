@@ -52,7 +52,8 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
         </button>
       ))}
 
-      {currentPage < totalPages && <button className="large-button" onClick={() => onPageChange(currentPage + 1)}>Siguiente</button>}
+      {currentPage < totalPages && <button className="large-button" 
+      onClick={() => onPageChange(currentPage + 1)}>Siguiente</button>}
     </div>
   );
 };
