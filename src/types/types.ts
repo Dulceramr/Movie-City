@@ -36,3 +36,7 @@ export type PaginationProps = {
   totalPages: number;
   onPageChange: (page: number) => void;
 };
+
+export type CarouselProps = {
+  onSelectMovie: (movieId: number) => void;
+};

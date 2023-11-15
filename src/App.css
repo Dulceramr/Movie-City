@@ -17,6 +17,7 @@
   position: fixed;
   width: 100vw;
   background-color: #0d0e11;
+  cursor: pointer;
 }
 
 .select-container{

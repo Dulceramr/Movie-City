@@ -16,7 +16,7 @@ export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }
 
   return (
     <table className="movie-table">
-      <tbody>
+      <tbody className="movie-container">
         {movieRows.map((row, rowIndex) => (
           <tr key={rowIndex}>
             {row.map((movie) => (

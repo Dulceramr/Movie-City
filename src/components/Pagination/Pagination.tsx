@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Pagination.css";
 import { PaginationProps } from "../../types/types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
 
@@ -45,7 +47,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   return (
     <div className='pagination-container'>
-      {currentPage > 1 && <button className="large-button" onClick={() => handlePageChange(currentPage - 1)}>Anterior</button>}
+      {currentPage > 1 && <button className="large-button" onClick={() => handlePageChange(currentPage - 1)}>
+      <FontAwesomeIcon icon={faCaretLeft} />
+        </button>}
       
       {pageNumbers.map(number => (
         <button 
@@ -58,7 +62,9 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
       ))}
 
       {currentPage < totalPages && <button className="large-button" 
-      onClick={() => handlePageChange(currentPage + 1)}>Siguiente</button>}
+      onClick={() => handlePageChange(currentPage + 1)}>
+        <FontAwesomeIcon icon={faCaretRight} />
+        </button>}
     </div>
   );
 };

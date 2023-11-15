@@ -36,10 +36,10 @@ export const MovieDetail: React.FC<MovieDetailProps> = ({
       )}
     </section>
         <aside className="Movie-text">
-          <p>Release Date: {movie.release_date}</p>
-          <p>Genres: {movie.genres.map((genre: Genre) => genre.name).join(", ")}</p>
+          <p> <strong> Release Date: </strong> {movie.release_date}</p>
+          <p> <strong> Genres: </strong> {movie.genres.map((genre: Genre) => genre.name).join(", ")}</p>
           <p>
-            Average rating: {movie.vote_average} ({movie.vote_count} votes) 
+            <strong> Average rating: </strong> {movie.vote_average} ({movie.vote_count} votes) 
           </p>
           <p>{movie.overview}</p>
         </aside>

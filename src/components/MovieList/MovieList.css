@@ -1,6 +1,6 @@
 .movie-item {
   width: 15em;
-  height: 35em;
+  height: 29em;
   margin: 1em;
   display: flex;
   flex-direction: column;
@@ -17,13 +17,13 @@
   background-color: #fffff0;
   color: black;
   width: 16em;
-  height: 36em;
+  height: 30em;
 }
 
 .poster {
   border-radius: 15%;
   width: 14em;
-  height: 20em;
+  height: 19em;
   border: #3c3c3c 2px solid;
 }
 
@@ -35,14 +35,9 @@
 }
 
 .title {
-  font-family: "Inter", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Playpen Sans", cursive;
-  font-size: large;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .date {
-  font-family: "Inter", sans-serif;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Playpen Sans", cursive;
+  font-family: 'Montserrat', sans-serif;
 }

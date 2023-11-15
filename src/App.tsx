@@ -33,6 +33,9 @@ function App() {
     }
   }, [selectedMovieId]);
   
+  const handleChange = () => {
+    window.scroll(0, 0);
+  }
 
   return (
     <>
@@ -40,8 +43,10 @@ function App() {
         <MovieDetail movie={selectedMovie} onReturn={() => setSelectedMovie(null)} />
       ) : (
         <>
-          <header className='main-title'>🎥 Movie City</header>
-          <Carousel />
+          <header 
+          onClick={() => handleChange()}
+          className='main-title'>🎥 Movie City</header>
+          <Carousel onSelectMovie={setSelectedMovieId} />
           <div className='select-container'>
             <OrderByGenre setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
             <SortBy setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>

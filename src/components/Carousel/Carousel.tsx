@@ -3,8 +3,9 @@ import { useState, useEffect, useRef } from "react";
 import "./Carousel.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { CarouselProps } from "../../types/types";
 
-export const Carousel: React.FC = () => {
+export const Carousel: React.FC<CarouselProps> = ({onSelectMovie }) => {
     const [movies, setMovies] = useState<Movie[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
     const [scrollLeft, setScrollLeft] = useState(0);
@@ -51,15 +52,15 @@ export const Carousel: React.FC = () => {
         <button className="carousel-arrow left-arrow" onClick={handleLeftArrowClick}>
         <FontAwesomeIcon className="icon" icon={faArrowLeft} />
         </button>
-    <div className="carousel-items" ref={containerRef} style={{ left: `-${scrollLeft}px` }}> 
+    <div className="carousel-items" ref={containerRef} style={{ left: `-${scrollLeft}px` }} > 
         {movies.map((movie) => (
-        <div key={movie.id} className="carousel-item">
+        <div key={movie.id} className="carousel-item" onClick={() => onSelectMovie(movie.id)}>
             <img 
             src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
             alt={movie.title}
             className="carousel-poster"
             />
-            <p className="carousel-title">{movie.title}</p>
+            <p className="carousel-title-movie">{movie.title}</p>
         </div>
         ))}
     </div>

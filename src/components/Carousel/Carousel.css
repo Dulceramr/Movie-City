@@ -1,51 +1,72 @@
 .carousel-container {
-    width: 100vw;
-    overflow-x: auto;
-    margin-top: 6em;
-    margin-bottom: 0.3em;
-    text-align: center;
-  }
-  
-  .carousel-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
+  width: 100vw;
+  overflow-x: auto;
+  margin-top: 6em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
 
-  .carousel-items {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
-    margin: 0 2em;
-  }
-  
-  .carousel-item {
-    flex: 0 0 auto;
-    box-sizing: border-box;
-    margin: 0.8em;
-    scroll-snap-align: start;
-    width: 15em;
-  }
-  
-  .carousel-poster {
-    width: 14em;
-    height: 20em;
-    border-radius: 15%;
-  }
+.carousel-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
 
-  .carousel-arrow {
-    border-radius: 50%;
-    width: 5em;
-    height: 5em;
-  }
+.carousel-items {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  margin: 0 2em;
+}
 
-  .carousel-arrow .icon {
-    font-size: 35px; 
-  }
+.carousel-item {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  margin: 0.8em;
+  scroll-snap-align: start;
+  width: 12em;
+  border-radius: 20px;
+  background-color: #282c34;
+  border: #3c3c3c solid 2px;
+  cursor: pointer;
+  padding-top: 1em;
+}
 
-  .left-arrow{
-    margin: 1em;
-  }
+.carousel-item:hover {
+  background-color: #fffff0;
+  color: black;
+  width: 13em;
+}
 
-  .right-arrow{
-    margin: 0;
-  }
+.carousel-title-movie {
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.6em;
+}
+
+.carousel-poster {
+  width: 11em;
+  height: 15em;
+  border-radius: 15%;
+}
+
+.carousel-arrow {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+}
+
+.carousel-arrow:hover {
+    cursor: pointer;
+}
+
+.carousel-arrow .icon {
+  font-size: 2em;
+}
+
+.left-arrow {
+  margin: 1em;
+}
+
+.right-arrow {
+  margin: 0;
+}
