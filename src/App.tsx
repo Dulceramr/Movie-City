@@ -7,6 +7,7 @@ import SearchMovie from './components/SearchMovie/SearchMovie';
 import SortBy from './components/SortBy/SortBy';
 import Pagination from './components/Pagination/Pagination';  
 import { Movie } from './types/types'
+import { Carousel } from './components/Carousel/Carousel';
 
 function App() {
   const [peliculas, setPeliculas] = useState<Movie[]>([]);
@@ -40,6 +41,7 @@ function App() {
       ) : (
         <>
           <h1 className='main-title'>Movie City</h1>
+          <Carousel />
           <div className='select-container'>
             <OrderByGenre setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
             <SortBy setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>

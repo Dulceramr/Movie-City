@@ -1,0 +1,29 @@
+.carousel-container {
+    width: 100vw;
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  
+  .carousel-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .carousel-items {
+    display: flex;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    width: 15em;
+  }
+  
+  .carousel-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
