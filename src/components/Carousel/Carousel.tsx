@@ -48,7 +48,7 @@ export const Carousel: React.FC = () => {
     <div className="carousel-container">
     <h2 className="carousel-title">Trending Movies</h2>
     <div className="carousel-navigation">
-        <button className="carousel-arrow" onClick={handleLeftArrowClick}>
+        <button className="carousel-arrow left-arrow" onClick={handleLeftArrowClick}>
         <FontAwesomeIcon className="icon" icon={faArrowLeft} />
         </button>
     <div className="carousel-items" ref={containerRef} style={{ left: `-${scrollLeft}px` }}> 
@@ -63,7 +63,7 @@ export const Carousel: React.FC = () => {
         </div>
         ))}
     </div>
-    <button className="carousel-arrow" onClick={handleRightArrowClick}>
+    <button className="carousel-arrow right-arrow" onClick={handleRightArrowClick}>
     <FontAwesomeIcon className="icon" icon={faArrowRight} />
     </button>
     </div>
