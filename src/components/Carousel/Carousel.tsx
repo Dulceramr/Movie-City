@@ -12,7 +12,7 @@ export const Carousel: React.FC = () => {
     const handleLeftArrowClick = () => {
         console.log("se hizo click en la izquierda");
         if (containerRef.current) {
-            const scrollAmount = 400;
+            const scrollAmount = 1000;
             containerRef.current.scrollLeft -= scrollAmount;
             setScrollLeft(containerRef.current.scrollLeft);
         }
@@ -21,7 +21,7 @@ export const Carousel: React.FC = () => {
     const handleRightArrowClick = () => {
         console.log("se hizo click en la derecha");
         if (containerRef.current) {
-            const scrollAmount = 400;
+            const scrollAmount = 1000;
             containerRef.current.scrollLeft += scrollAmount;
             setScrollLeft(containerRef.current.scrollLeft);
         }
@@ -46,7 +46,7 @@ export const Carousel: React.FC = () => {
 
   return (
     <div className="carousel-container">
-    <h2 className="carousel-title">Trending Movies</h2>
+    <h2 className="carousel-title">Trending Movies 🔥</h2>
     <div className="carousel-navigation">
         <button className="carousel-arrow left-arrow" onClick={handleLeftArrowClick}>
         <FontAwesomeIcon className="icon" icon={faArrowLeft} />

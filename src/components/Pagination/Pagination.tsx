@@ -40,7 +40,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   const handlePageChange = (page:number) => {
     onPageChange(page);
-    window.scroll(0,0);
+    window.scroll(0,1000);
   };
 
   return (

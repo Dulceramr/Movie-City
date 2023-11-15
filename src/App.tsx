@@ -40,7 +40,7 @@ function App() {
         <MovieDetail movie={selectedMovie} onReturn={() => setSelectedMovie(null)} />
       ) : (
         <>
-          <h1 className='main-title'>Movie City</h1>
+          <header className='main-title'>🎥 Movie City</header>
           <Carousel />
           <div className='select-container'>
             <OrderByGenre setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
