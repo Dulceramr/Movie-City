@@ -12,6 +12,7 @@
   .carousel-items {
     display: flex;
     scroll-snap-type: x mandatory;
+    overflow-x: auto;
   }
   
   .carousel-item {

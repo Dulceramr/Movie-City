@@ -1,16 +1,40 @@
 import { Movie } from "../../types/types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Carousel.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export const Carousel: React.FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [scrollLeft, setScrollLeft] = useState(0);
+
+    const handleLeftArrowClick = () => {
+        console.log("se hizo click en la izquierda");
+        if (containerRef.current) {
+            const scrollAmount = 400;
+            containerRef.current.scrollLeft -= scrollAmount;
+            setScrollLeft(containerRef.current.scrollLeft);
+        }
+    };
+    
+    const handleRightArrowClick = () => {
+        console.log("se hizo click en la derecha");
+        if (containerRef.current) {
+            const scrollAmount = 400;
+            containerRef.current.scrollLeft += scrollAmount;
+            setScrollLeft(containerRef.current.scrollLeft);
+        }
+    };
+    
 
     useEffect(() => {
+        console.log('containerRef.current:', containerRef.current);
+
         const fetchTrendingMovies =async () => {
             try {
                 const response = await fetch('https://api.themoviedb.org/3/trending/movie/week?api_key=03d8479e6ac8e870c3ef0fea7b1b15c3');
                 const data = await response.json();
-                console.log("Trending movies data:", data); 
                 setMovies(data.results);
             } catch (error) {
                 console.error("Error fetching trending movies", error);
@@ -23,7 +47,11 @@ export const Carousel: React.FC = () => {
   return (
     <div className="carousel-container">
     <h2 className="carousel-title">Trending Movies</h2>
-    <div className="carousel-items"> 
+    <div className="carousel-navigation">
+        <button className="carousel-arrow" onClick={handleLeftArrowClick}>
+        <FontAwesomeIcon className="icon" icon={faArrowLeft} />
+        </button>
+    <div className="carousel-items" ref={containerRef} style={{ left: `-${scrollLeft}px` }}> 
         {movies.map((movie) => (
         <div key={movie.id} className="carousel-item">
             <img 
@@ -34,6 +62,10 @@ export const Carousel: React.FC = () => {
             <p className="carousel-title">{movie.title}</p>
         </div>
         ))}
+    </div>
+    <button className="carousel-arrow" onClick={handleRightArrowClick}>
+    <FontAwesomeIcon className="icon" icon={faArrowRight} />
+    </button>
     </div>
     </div>
   );
