@@ -15,6 +15,7 @@ function App() {
   const [totalPages, setTotalPages] = useState<number>(1);
   const [selectedMovieId, setSelectedMovieId] = useState<number | null>(null);
   const [selectedMovie, setSelectedMovie] = useState<any | null>(null);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const API_KEY = '03d8479e6ac8e870c3ef0fea7b1b15c3';
 
@@ -50,10 +51,22 @@ function App() {
           <div className='select-container'>
             <OrderByGenre setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
             <SortBy setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-            <SearchMovie setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+            <SearchMovie 
+            setPeliculas={setPeliculas} 
+            setTotalPages={setTotalPages} 
+            currentPage={currentPage} 
+            setCurrentPage={setCurrentPage} 
+            setSearchTerm={setSearchTerm}
+            searchTerm={searchTerm}
+            setSearchResults={setPeliculas} 
+            />
           </div>
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
-          <MovieList peliculas={peliculas} onSelectMovie={setSelectedMovieId} /> 
+          <MovieList 
+          peliculas={peliculas} 
+            onSelectMovie={(movieId) => {
+              setSelectedMovieId(movieId);
+          }} /> 
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
         </>
       )}

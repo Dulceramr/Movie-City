@@ -28,7 +28,7 @@ export const MovieList: React.FC<MovieListProps> = ({ peliculas, onSelectMovie }
             {row.map((movie) => (
               <td key={movie.id}>
                 <div className="movie-item" onClick={() => onSelectMovie(movie.id)}>
-                  <span className={`vote-badge ${movie.vote_average > 6? "blue-badge" : "red-badge"}`}> {movie.vote_average} </span>
+                  <span className={`vote-badge ${movie.vote_average > 6? "blue-badge" : "red-badge"}`}> {movie.vote_average.toFixed(1)} </span>
                   {movie.poster_path ? (
                     <img
                       src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
