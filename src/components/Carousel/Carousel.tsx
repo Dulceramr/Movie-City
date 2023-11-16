@@ -55,6 +55,9 @@ export const Carousel: React.FC<CarouselProps> = ({onSelectMovie }) => {
     <div className="carousel-items" ref={containerRef} style={{ left: `-${scrollLeft}px` }} > 
         {movies.map((movie) => (
         <div key={movie.id} className="carousel-item" onClick={() => onSelectMovie(movie.id)}>
+            <span className={`carousel-badge ${movie.vote_average > 6? "blue-carousel-badge" : "red-carousel-badge"}` }> 
+            {movie.vote_average.toFixed(1)} 
+            </span>
             <img 
             src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
             alt={movie.title}

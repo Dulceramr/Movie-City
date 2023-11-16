@@ -19,6 +19,7 @@
 }
 
 .carousel-item {
+  position: relative;
   flex: 0 0 auto;
   box-sizing: border-box;
   margin: 0.8em;
@@ -37,16 +38,40 @@
   width: 13em;
 }
 
-.carousel-title-movie {
-    font-size: 1em;
-    font-family: 'Montserrat', sans-serif;
-    padding: 0.6em;
+.carousel-item:hover .carousel-badge {
+  color: #fff;
+}
+
+.carousel-badge{
+  position: absolute;
+  top: 0.8em;
+  right: 1em;
+  border-radius: 45%;
+  padding: 2%;
+  width: 1.4em;
+  height: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+}
+
+.blue-carousel-badge {
+  background-color: #0a497b;
+}
+
+.red-carousel-badge {
+  background-color: #cb3234;
 }
 
 .carousel-poster {
   width: 11em;
   height: 15em;
   border-radius: 15%;
+}
+
+.carousel-title-movie {
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.6em;
 }
 
 .carousel-arrow {

@@ -1,4 +1,5 @@
 .movie-item {
+  position: relative;
   width: 15em;
   height: 29em;
   margin: 1em;
@@ -18,6 +19,31 @@
   color: black;
   width: 16em;
   height: 30em;
+}
+
+.movie-item:hover .vote-badge {
+  color: #fff
+}
+
+.vote-badge {
+  position: absolute;
+  top: 4em;
+  right: 1em;
+  border-radius: 45%;
+  padding: 2%;
+  width: 1.4em;
+  height: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7em;
+  
+}
+
+.blue-badge {
+  background-color: #0a497b;
+}
+
+.red-badge{
+  background-color: #cb3234;
 }
 
 .poster {
