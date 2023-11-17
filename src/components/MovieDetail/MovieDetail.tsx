@@ -31,7 +31,7 @@ export const MovieDetail: React.FC<MovieDetailProps> = ({
             alt="Default movie poster"
             className="movie-poster-no-image"
           />
-          <div className="no-image-text">No Image Available</div>
+          <div className="no-image-text-detail">No Image Available</div>
         </>
       )}
     </section>

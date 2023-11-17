@@ -18,6 +18,7 @@
   width: 100vw;
   background-color: #0d0e11;
   cursor: pointer;
+  z-index: 1000
 }
 
 .select-container{

@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+.carousel-navigation{
+  display: flex;
+  align-items: center;
+}
+
 .carousel-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -15,7 +20,8 @@
   display: flex;
   scroll-snap-type: x mandatory;
   overflow-x: auto;
-  margin: 0 2em;
+  margin: 0;
+  width: 82em;
 }
 
 .carousel-item {
@@ -75,9 +81,11 @@
 }
 
 .carousel-arrow {
-  border-radius: 50%;
+  border-radius: 15px;
   width: 3em;
-  height: 3em;
+  height: 28em;
+  background-color: transparent;
+  border: none;
 }
 
 .carousel-arrow:hover {
@@ -86,10 +94,11 @@
 
 .carousel-arrow .icon {
   font-size: 2em;
+  color: #fff;
 }
 
 .left-arrow {
-  margin: 1em;
+  margin-left: 1em;
 }
 
 .right-arrow {
