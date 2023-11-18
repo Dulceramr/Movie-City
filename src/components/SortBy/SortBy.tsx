@@ -5,9 +5,10 @@ import { Movie } from "../../types/types";
 const SortBy: React.FC<{
   setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
   setTotalPages: React.Dispatch<React.SetStateAction<number>>,
-  currentPage: number 
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-}> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage }) => {
+  currentPage: number, 
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
+  setResults: React.Dispatch<React.SetStateAction<Movie[]>>
+}> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage, setResults }) => {
   const BASE_URL = 'https://api.themoviedb.org/3/discover/movie';
   const API_KEY = '03d8479e6ac8e870c3ef0fea7b1b15c3';
 
@@ -26,17 +27,18 @@ const SortBy: React.FC<{
         const data = await response.json();
         setPeliculas(data.results);
         setTotalPages(data.total_pages);
+        setResults(data.results); 
       } catch (error) {
         console.error("Error fetching sorted movies:", error);
       }
     };
     fetchSortedMovies();
-  }, [sortByValue, currentPage]);
+  }, [sortByValue, currentPage, setResults, setPeliculas, setTotalPages]);
 
   return (
     <div>
       <label className="label-sort-by" htmlFor="sortBy">Sort by: </label>
-      <select id="sortBy" className="button-sort-by" onChange={handleChange}>
+      <select id="sortBy" className="button-sort-by" onChange={handleChange} value={sortByValue}>
         <option value="popularity.desc">Popularity Descending</option>
         <option value="original_title.asc">Title Ascending</option>
         <option value="vote_average.desc">Rating Descending</option>

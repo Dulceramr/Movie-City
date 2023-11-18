@@ -50,7 +50,13 @@ function App() {
           <Carousel onSelectMovie={setSelectedMovieId} />
           <div className='select-container'>
             <OrderByGenre setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-            <SortBy setPeliculas={setPeliculas} setTotalPages={setTotalPages} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+            <SortBy 
+            setPeliculas={setPeliculas} 
+            setTotalPages={setTotalPages} 
+            currentPage={currentPage} 
+            setCurrentPage={setCurrentPage}
+            setResults={setPeliculas} 
+            />
             <SearchMovie 
             setPeliculas={setPeliculas} 
             setTotalPages={setTotalPages} 
@@ -58,7 +64,7 @@ function App() {
             setCurrentPage={setCurrentPage} 
             setSearchTerm={setSearchTerm}
             searchTerm={searchTerm}
-            setSearchResults={setPeliculas} 
+            setResults={setPeliculas} 
             />
           </div>
           <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setCurrentPage} />
