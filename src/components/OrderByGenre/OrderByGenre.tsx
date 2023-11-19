@@ -15,9 +15,6 @@ export const OrderByGenre: React.FC<OrderByGenreProps> = ({ setPeliculas, setTot
         const response = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
         const data = await response.json();
         setGenres(data.genres);
-        /* console.log(`genres: ${genres}`);
-        console.log(`response await fetch: ${response}`);
-        console.log(`data await response.json: ${data}`); */
       } catch (error) {
         console.error("Error fetching genres", error);
       }
@@ -29,7 +26,7 @@ export const OrderByGenre: React.FC<OrderByGenreProps> = ({ setPeliculas, setTot
   const handleByChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const genre = event.target.value;
     setSelectedGenre(genre);
-    setCurrentPage(1); // Reinicia la página a 1
+    setCurrentPage(1); 
 };
 
   useEffect(() => {

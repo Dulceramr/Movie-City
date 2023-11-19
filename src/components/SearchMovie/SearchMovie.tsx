@@ -2,24 +2,16 @@ import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import "./SearchMovie.css";
-import { Movie } from "../../types/types";
+import { SearchMovieProps } from "../../types/types";
 
-const SearchMovie: React.FC<{
-  setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
-  setTotalPages: React.Dispatch<React.SetStateAction<number>>,
-  currentPage: number, 
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>,
-  setResults: React.Dispatch<React.SetStateAction<Movie[]>>,
-  searchTerm: string
-}> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage, setSearchTerm, setResults, searchTerm }) => {
+const SearchMovie: React.FC<SearchMovieProps> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage, setSearchTerm, setResults, searchTerm }) => {
   const BASE_URL = 'https://api.themoviedb.org/3/search/movie';
   const API_KEY = '03d8479e6ac8e870c3ef0fea7b1b15c3';
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = event.target.value;
     setSearchTerm(searchValue);
-    setCurrentPage(1); // Reinicia la página a 1
+    setCurrentPage(1); 
 };
 
   useEffect(() => {

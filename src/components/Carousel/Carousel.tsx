@@ -11,7 +11,6 @@ export const Carousel: React.FC<CarouselProps> = ({ onSelectMovie }) => {
   const [scrollLeft, setScrollLeft] = useState(0);
 
   const handleLeftArrowClick = () => {
-    console.log("se hizo click en la izquierda");
     if (containerRef.current) {
       const scrollAmount = 800;
       containerRef.current.scrollLeft -= scrollAmount;
@@ -20,7 +19,6 @@ export const Carousel: React.FC<CarouselProps> = ({ onSelectMovie }) => {
   };
 
   const handleRightArrowClick = () => {
-    console.log("se hizo click en la derecha");
     if (containerRef.current) {
       const scrollAmount = 800;
       containerRef.current.scrollLeft += scrollAmount;
@@ -29,8 +27,6 @@ export const Carousel: React.FC<CarouselProps> = ({ onSelectMovie }) => {
   };
 
   useEffect(() => {
-    console.log("containerRef.current:", containerRef.current);
-
     const fetchTrendingMovies = async () => {
       try {
         const response = await fetch(

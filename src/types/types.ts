@@ -1,7 +1,3 @@
-export type Genre = {
-  id: number;
-  name: string;
-};
 export type Movie = {
   id: number;
   title: string;
@@ -14,14 +10,13 @@ export type Movie = {
   vote_count: number;
 };
 
-export type MovieDetailProps = {
-  movie: Movie;
-  onReturn: () => void;
+export type CarouselProps = {
+  onSelectMovie: (movieId: number) => void;
 };
 
-export type MovieListProps = {
-  peliculas: Movie[];
-  onSelectMovie: (movieId: number) => void;
+export type Genre = {
+  id: number;
+  name: string;
 };
 
 export type OrderByGenreProps = {
@@ -31,12 +26,36 @@ export type OrderByGenreProps = {
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 };
 
+export type SortByProps = {
+  setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
+  setTotalPages: React.Dispatch<React.SetStateAction<number>>,
+  currentPage: number, 
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
+  setResults: React.Dispatch<React.SetStateAction<Movie[]>>
+};
+
+export type SearchMovieProps = {
+  setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
+  setTotalPages: React.Dispatch<React.SetStateAction<number>>,
+  currentPage: number, 
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>,
+  setResults: React.Dispatch<React.SetStateAction<Movie[]>>,
+  searchTerm: string
+};
+
 export type PaginationProps = {
   currentPage: number;
   totalPages: number;
   onPageChange: (page: number) => void;
 };
 
-export type CarouselProps = {
+export type MovieListProps = {
+  peliculas: Movie[];
   onSelectMovie: (movieId: number) => void;
+};
+
+export type MovieDetailProps = {
+  movie: Movie;
+  onReturn: () => void;
 };

@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "./SortBy.css";
-import { Movie } from "../../types/types";
+import { SortByProps } from "../../types/types";
 
-const SortBy: React.FC<{
-  setPeliculas: React.Dispatch<React.SetStateAction<Movie[]>>,
-  setTotalPages: React.Dispatch<React.SetStateAction<number>>,
-  currentPage: number, 
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>,
-  setResults: React.Dispatch<React.SetStateAction<Movie[]>>
-}> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage, setResults }) => {
+const SortBy: React.FC<SortByProps> = ({ setPeliculas, setTotalPages, currentPage, setCurrentPage, setResults }) => {
   const BASE_URL = 'https://api.themoviedb.org/3/discover/movie';
   const API_KEY = '03d8479e6ac8e870c3ef0fea7b1b15c3';
 
