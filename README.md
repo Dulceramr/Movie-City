@@ -1,7 +1,15 @@
-# Movie City
+# Welcome to Movie City: Your Gateway to Cinematic Exploration
+
+### Explore Movie City
+
+To explore Movie City, visit the [Movie City Website](https://movie-city-challenge.netlify.app/).
 
 ### Overview 
-Welcome to Movie City, a React and TypeScript-powered Single Page App that utilizes The Movie Database API V3 to bring you information about movies, including titles, release dates, posters, and descriptions. The project is deployed with Netlify.
+In a world where the love for movies knows no bounds, having a dedicated platform that effortlessly unveils the intricate details of each cinematic masterpiece becomes paramount. **Movie City** stands as more than just a website; it is your portal to a treasure trove of information, a virtual cinephile haven.
+
+Immerse yourself in the allure of the film industry, where every click opens the door to a wealth of details about your favorite movies. From release dates to captivating posters, from insightful descriptions to the pulse of audience opinions.
+
+**Movie City**, a React and TypeScript-powered Single Page App utilizes The Movie Database API V3 to bring you information about movies, including titles, release dates, posters, and descriptions. The project is deployed with Netlify.
 
 From the main view, you can see a carousel featuring trending movies. You can also perform a search by filtering by genre, popularity, title, and rating or directly writing on the input cage. 
 
@@ -25,29 +33,29 @@ When selecting a movie, you can view the details to obtain more information.
 
 ### User stories
 
-User Story 1: Movie Listing
+**User Story 1: Movie Listing**  
 As a user, I want to visualize the catalog of movies in a table (rows and columns).
 
-Acceptance Criteria
+**Acceptance Criteria**
 
 The /discover/movie endpoint must be used.
 The application includes pagination to explore the catalog by pages.
 For each movie, at a minimum, display the poster, original title, and release year.
 
-[User Story 2] Filtering and Sorting
+**User Story 2: Filtering and Sorting**  
 As a user, I want to filter and sort the movie catalog using the criteria supported by The Movie Database API V3.
 
-Acceptance Criteria
+**Acceptance Criteria**
 
 To filter, the /discover/movie endpoint must be used, along with one of its parameters, such as with_genres.
 To sort, the /discover/movie endpoint must be used, along with one of its parameters, such as sort_by.
 Pagination should retain the applied filter and sorting.
 For each movie, at a minimum, display the poster, original title, and release year.
 
-[User Story 3] Movie Details
+**User Story 3: Movie Details**  
 As a user, I want to view the details of a movie.
 
-Acceptance Criteria
+**Acceptance Criteria**
 
 The /movie/{movie_id} endpoint must be used.
 For the movie, at a minimum, display the poster, original title, release year, genres, average rating, and total votes.
